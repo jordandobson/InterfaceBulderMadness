@@ -70,6 +70,34 @@ All labels should have appropriate placeholder text.
 
 
 
+## Text To Speech Tab
+
+- Use an NSSpeechSynthesizer
+- Become the delegate for NSSpeechSynthesizer
+
+UI
+
+An NSTextView or NSTextField to get user input.
+
+Have a 'start speaking' button that is disabled while the synthesizer is speaking. Enable the button again when the synthesizer is done speaking.
+
+Add a NSSegmentedControl for voice selection. You may choose the voices. Only a few are necessary.
+
+Add two buttons that populate the text view with some text of your choice. Corporate mission statements sound funny when spoken by a robot. 
+
+
+
+## Omakase Tab
+
+This is all yours. What goes in here is up to you. [Omakase](http://en.wikipedia.org/wiki/Omakase) style.
+
+Some suggestions to get the creative neurons flowing:
+
+- Change color and or font of a text input via button clicks.
+- Take text input and write it backwards into a label on button click or via live updating.
+- Highlight or words where a speech synthesizer is speaking. (advanced)
+- Surprise us. Make us happy. Have fun and explore Objective-C.
+
 
 
 
