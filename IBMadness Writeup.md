@@ -11,11 +11,11 @@ Your tab view will have the following three sections:
 
 ## Numbers Tab
 
-Add label
-Add text field
-Add slider
-Add label
-Add radio (NSMatrix)
+- Add label
+- Add text field
+- Add slider
+- Add label
+- Add radio (NSMatrix)
 
 Create outlets in your AppDelegate.h file. Recall that IBOutlet is defined to nothing. It’s just a flag for Xcode and Interface Builder that provides context and allows for that drag-drop circle in the code. You only need outlets for UI elements you want to change or access in code.
 
@@ -27,7 +27,7 @@ Add actions in your AppDelegate.m file and connect them to the appropriate UI co
 - numberFieldChanged
 - radioChanged
 
-These Methods should all have the method signature `- (IBAction)someCoolMethodName:(id)sender`. IBAction is similar to IBOutlet. It is defined to void, and just adds context for Xcode and Interface Builder to update the UI appropriately. Make sure to name your methods something descriptive. Generally, methods should start with vowels and indicate what action you will perform, not what action was performed to call the method. That is, `changeTextFieldColor:` is a better name than `colorButtonPressed:`.
+These Methods should all have the method signature `- (IBAction)someCoolMethodName:(id)sender`. IBAction is similar to IBOutlet. It is defined to void, and just adds context for Xcode and Interface Builder to update the UI appropriately. Make sure to name your methods something descriptive. Generally, methods should start with a verb that indicates what action you will perform, not what action was performed to call the method. That is, `changeTextFieldColor:` is a better name than `colorButtonPressed:`.
 
 On Slider Change
   Log out the integer value of the slider
