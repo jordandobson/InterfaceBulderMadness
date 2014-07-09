@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E1A869E0-B51B-4CDF-90DE-51C501969394</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Interface Builder Madness</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0A6D4819-C72C-4A99-8AB8-9D0AFDED1A54</key>
+		<string>ssh://github.com/jordandobson/InterfaceBulderMadness.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Interface Builder Madness/Interface Builder Madness.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0A6D4819-C72C-4A99-8AB8-9D0AFDED1A54</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/jordandobson/InterfaceBulderMadness.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0A6D4819-C72C-4A99-8AB8-9D0AFDED1A54</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0A6D4819-C72C-4A99-8AB8-9D0AFDED1A54</string>
+			<key>IDESourceControlWCCName</key>
+			<string>InterfaceBulderMadness</string>
+		</dict>
+	</array>
+</dict>
+</plist>

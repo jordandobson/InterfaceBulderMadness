@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		179B53DA196C7DD200C1CC2C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179B53D9196C7DD200C1CC2C /* Cocoa.framework */; };
+		179B53E4196C7DD200C1CC2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 179B53E2196C7DD200C1CC2C /* InfoPlist.strings */; };
+		179B53E6196C7DD200C1CC2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 179B53E5196C7DD200C1CC2C /* main.m */; };
+		179B53EA196C7DD200C1CC2C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 179B53E8196C7DD200C1CC2C /* Credits.rtf */; };
+		179B53ED196C7DD200C1CC2C /* JRDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 179B53EC196C7DD200C1CC2C /* JRDAppDelegate.m */; };
+		179B53F0196C7DD200C1CC2C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179B53EE196C7DD200C1CC2C /* MainMenu.xib */; };
+		179B53F2196C7DD200C1CC2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179B53F1196C7DD200C1CC2C /* Images.xcassets */; };
+		179B53F9196C7DD200C1CC2C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179B53F8196C7DD200C1CC2C /* XCTest.framework */; };
+		179B53FA196C7DD200C1CC2C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179B53D9196C7DD200C1CC2C /* Cocoa.framework */; };
+		179B5402196C7DD200C1CC2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 179B5400196C7DD200C1CC2C /* InfoPlist.strings */; };
+		179B5404196C7DD200C1CC2C /* Interface_Builder_MadnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 179B5403196C7DD200C1CC2C /* Interface_Builder_MadnessTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		179B53FB196C7DD200C1CC2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 179B53CE196C7DD200C1CC2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 179B53D5196C7DD200C1CC2C;
+			remoteInfo = "Interface Builder Madness";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		179B53D6196C7DD200C1CC2C /* Interface Builder Madness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interface Builder Madness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		179B53D9196C7DD200C1CC2C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		179B53DC196C7DD200C1CC2C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		179B53DD196C7DD200C1CC2C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		179B53DE196C7DD200C1CC2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		179B53E1196C7DD200C1CC2C /* Interface Builder Madness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Interface Builder Madness-Info.plist"; sourceTree = "<group>"; };
+		179B53E3196C7DD200C1CC2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		179B53E5196C7DD200C1CC2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		179B53E7196C7DD200C1CC2C /* Interface Builder Madness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Interface Builder Madness-Prefix.pch"; sourceTree = "<group>"; };
+		179B53E9196C7DD200C1CC2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		179B53EB196C7DD200C1CC2C /* JRDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRDAppDelegate.h; sourceTree = "<group>"; };
+		179B53EC196C7DD200C1CC2C /* JRDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRDAppDelegate.m; sourceTree = "<group>"; };
+		179B53EF196C7DD200C1CC2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		179B53F1196C7DD200C1CC2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		179B53F7196C7DD200C1CC2C /* Interface Builder MadnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Interface Builder MadnessTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		179B53F8196C7DD200C1CC2C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		179B53FF196C7DD200C1CC2C /* Interface Builder MadnessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Interface Builder MadnessTests-Info.plist"; sourceTree = "<group>"; };
+		179B5401196C7DD200C1CC2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		179B5403196C7DD200C1CC2C /* Interface_Builder_MadnessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Interface_Builder_MadnessTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		179B53D3196C7DD200C1CC2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179B53DA196C7DD200C1CC2C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179B53F4196C7DD200C1CC2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179B53FA196C7DD200C1CC2C /* Cocoa.framework in Frameworks */,
+				179B53F9196C7DD200C1CC2C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		179B53CD196C7DD200C1CC2C = {
+			isa = PBXGroup;
+			children = (
+				179B53DF196C7DD200C1CC2C /* Interface Builder Madness */,
+				179B53FD196C7DD200C1CC2C /* Interface Builder MadnessTests */,
+				179B53D8196C7DD200C1CC2C /* Frameworks */,
+				179B53D7196C7DD200C1CC2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		179B53D7196C7DD200C1CC2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				179B53D6196C7DD200C1CC2C /* Interface Builder Madness.app */,
+				179B53F7196C7DD200C1CC2C /* Interface Builder MadnessTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		179B53D8196C7DD200C1CC2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				179B53D9196C7DD200C1CC2C /* Cocoa.framework */,
+				179B53F8196C7DD200C1CC2C /* XCTest.framework */,
+				179B53DB196C7DD200C1CC2C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		179B53DB196C7DD200C1CC2C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				179B53DC196C7DD200C1CC2C /* AppKit.framework */,
+				179B53DD196C7DD200C1CC2C /* CoreData.framework */,
+				179B53DE196C7DD200C1CC2C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		179B53DF196C7DD200C1CC2C /* Interface Builder Madness */ = {
+			isa = PBXGroup;
+			children = (
+				179B53EB196C7DD200C1CC2C /* JRDAppDelegate.h */,
+				179B53EC196C7DD200C1CC2C /* JRDAppDelegate.m */,
+				179B53EE196C7DD200C1CC2C /* MainMenu.xib */,
+				179B53F1196C7DD200C1CC2C /* Images.xcassets */,
+				179B53E0196C7DD200C1CC2C /* Supporting Files */,
+			);
+			path = "Interface Builder Madness";
+			sourceTree = "<group>";
+		};
+		179B53E0196C7DD200C1CC2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				179B53E1196C7DD200C1CC2C /* Interface Builder Madness-Info.plist */,
+				179B53E2196C7DD200C1CC2C /* InfoPlist.strings */,
+				179B53E5196C7DD200C1CC2C /* main.m */,
+				179B53E7196C7DD200C1CC2C /* Interface Builder Madness-Prefix.pch */,
+				179B53E8196C7DD200C1CC2C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		179B53FD196C7DD200C1CC2C /* Interface Builder MadnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				179B5403196C7DD200C1CC2C /* Interface_Builder_MadnessTests.m */,
+				179B53FE196C7DD200C1CC2C /* Supporting Files */,
+			);
+			path = "Interface Builder MadnessTests";
+			sourceTree = "<group>";
+		};
+		179B53FE196C7DD200C1CC2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				179B53FF196C7DD200C1CC2C /* Interface Builder MadnessTests-Info.plist */,
+				179B5400196C7DD200C1CC2C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		179B53D5196C7DD200C1CC2C /* Interface Builder Madness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 179B5407196C7DD200C1CC2C /* Build configuration list for PBXNativeTarget "Interface Builder Madness" */;
+			buildPhases = (
+				179B53D2196C7DD200C1CC2C /* Sources */,
+				179B53D3196C7DD200C1CC2C /* Frameworks */,
+				179B53D4196C7DD200C1CC2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Interface Builder Madness";
+			productName = "Interface Builder Madness";
+			productReference = 179B53D6196C7DD200C1CC2C /* Interface Builder Madness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		179B53F6196C7DD200C1CC2C /* Interface Builder MadnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 179B540A196C7DD200C1CC2C /* Build configuration list for PBXNativeTarget "Interface Builder MadnessTests" */;
+			buildPhases = (
+				179B53F3196C7DD200C1CC2C /* Sources */,
+				179B53F4196C7DD200C1CC2C /* Frameworks */,
+				179B53F5196C7DD200C1CC2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				179B53FC196C7DD200C1CC2C /* PBXTargetDependency */,
+			);
+			name = "Interface Builder MadnessTests";
+			productName = "Interface Builder MadnessTests";
+			productReference = 179B53F7196C7DD200C1CC2C /* Interface Builder MadnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		179B53CE196C7DD200C1CC2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JRD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jordan Dobson";
+				TargetAttributes = {
+					179B53F6196C7DD200C1CC2C = {
+						TestTargetID = 179B53D5196C7DD200C1CC2C;
+					};
+				};
+			};
+			buildConfigurationList = 179B53D1196C7DD200C1CC2C /* Build configuration list for PBXProject "Interface Builder Madness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 179B53CD196C7DD200C1CC2C;
+			productRefGroup = 179B53D7196C7DD200C1CC2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				179B53D5196C7DD200C1CC2C /* Interface Builder Madness */,
+				179B53F6196C7DD200C1CC2C /* Interface Builder MadnessTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		179B53D4196C7DD200C1CC2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179B53E4196C7DD200C1CC2C /* InfoPlist.strings in Resources */,
+				179B53F2196C7DD200C1CC2C /* Images.xcassets in Resources */,
+				179B53EA196C7DD200C1CC2C /* Credits.rtf in Resources */,
+				179B53F0196C7DD200C1CC2C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179B53F5196C7DD200C1CC2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179B5402196C7DD200C1CC2C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		179B53D2196C7DD200C1CC2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179B53E6196C7DD200C1CC2C /* main.m in Sources */,
+				179B53ED196C7DD200C1CC2C /* JRDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		179B53F3196C7DD200C1CC2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179B5404196C7DD200C1CC2C /* Interface_Builder_MadnessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		179B53FC196C7DD200C1CC2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 179B53D5196C7DD200C1CC2C /* Interface Builder Madness */;
+			targetProxy = 179B53FB196C7DD200C1CC2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		179B53E2196C7DD200C1CC2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				179B53E3196C7DD200C1CC2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		179B53E8196C7DD200C1CC2C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				179B53E9196C7DD200C1CC2C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		179B53EE196C7DD200C1CC2C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				179B53EF196C7DD200C1CC2C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		179B5400196C7DD200C1CC2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				179B5401196C7DD200C1CC2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		179B5405196C7DD200C1CC2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		179B5406196C7DD200C1CC2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		179B5408196C7DD200C1CC2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interface Builder Madness/Interface Builder Madness-Prefix.pch";
+				INFOPLIST_FILE = "Interface Builder Madness/Interface Builder Madness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		179B5409196C7DD200C1CC2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interface Builder Madness/Interface Builder Madness-Prefix.pch";
+				INFOPLIST_FILE = "Interface Builder Madness/Interface Builder Madness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		179B540B196C7DD200C1CC2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Interface Builder Madness.app/Contents/MacOS/Interface Builder Madness";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interface Builder Madness/Interface Builder Madness-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Interface Builder MadnessTests/Interface Builder MadnessTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		179B540C196C7DD200C1CC2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Interface Builder Madness.app/Contents/MacOS/Interface Builder Madness";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interface Builder Madness/Interface Builder Madness-Prefix.pch";
+				INFOPLIST_FILE = "Interface Builder MadnessTests/Interface Builder MadnessTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		179B53D1196C7DD200C1CC2C /* Build configuration list for PBXProject "Interface Builder Madness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179B5405196C7DD200C1CC2C /* Debug */,
+				179B5406196C7DD200C1CC2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		179B5407196C7DD200C1CC2C /* Build configuration list for PBXNativeTarget "Interface Builder Madness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179B5408196C7DD200C1CC2C /* Debug */,
+				179B5409196C7DD200C1CC2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		179B540A196C7DD200C1CC2C /* Build configuration list for PBXNativeTarget "Interface Builder MadnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179B540B196C7DD200C1CC2C /* Debug */,
+				179B540C196C7DD200C1CC2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 179B53CE196C7DD200C1CC2C /* Project object */;
+}
