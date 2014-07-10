@@ -20,27 +20,22 @@
     [[self numberFormat] sendAction];
 }
 
--(IBAction)sliderChanged:(id)sender {
-
-    NSNumber *sliderNumber    = [NSNumber numberWithInteger:_numberSlider.integerValue];
-    NSString *convertedString = [self.formatter stringFromNumber:sliderNumber];
-
-    if(sliderNumber != NULL){
+-(IBAction)udpateNumberLabelWithSliderValue:(id)sender {
+    NSString *convertedString = [self.formatter stringFromNumber:@(_numberSlider.integerValue)];
+    if(convertedString != NULL){
         _numberOutput.stringValue = convertedString;
     }
 }
 
--(IBAction)numberFieldChanged:(id)sender {
+-(IBAction)updateNumberLabelWithFieldValue:(id)sender {
 
-    NSNumber *fieldNumber    = [NSNumber numberWithInteger:_numberField.integerValue];
-    NSString *convertedField = [self.formatter stringFromNumber:fieldNumber];
-
+    NSString *convertedField = [self.formatter stringFromNumber: @(_numberField.integerValue)];
     if(convertedField != NULL){
         _numberOutput.stringValue = convertedField;
     }
 }
 
--(IBAction)radioChange:(id)sender {
+-(IBAction)updateFormatfromRadioButtons:(id)sender {
 
     NSInteger selectedRow   = _numberFormat.selectedRow;
     NSNumber  *pulledNumber = [self.formatter numberFromString:_numberOutput.stringValue];
@@ -62,8 +57,6 @@
     }
 }
 
-
-
 @end
 
 
@@ -81,7 +74,7 @@
 //- (void)setNumberStyle:(NSNumberFormatterStyle)style;
 
 
-                                                                                // These all provide the same result
-                                                                                // [self numberOutput].stringValue = sliderValue;
-                                                                                // self.numberOutput.stringValue   = sliderValue;
-                                                                                // _numberOutput.stringValue       = sliderValue;
+// These all provide the same result
+// [self numberOutput].stringValue = sliderValue;
+// self.numberOutput.stringValue   = sliderValue;
+// _numberOutput.stringValue       = sliderValue;
