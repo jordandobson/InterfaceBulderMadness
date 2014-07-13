@@ -18,6 +18,8 @@ The logic parts are easy so far and how they map to UI elements makes sense. I j
 
 I would just like to better understand how I can create a method that my IBAction methods can call that better optimize my code to just check for a null and then do the conversion. I've tried this but haven't been able to scope it correctly. What is a simple implementation of this type of interaction / communication?
 
+I would also like to see how to best setup two different Speech Synthesizers as well as using NSRange to select and replace a piece of text in a textField.
+
 VIDEOS
 =======================
 
