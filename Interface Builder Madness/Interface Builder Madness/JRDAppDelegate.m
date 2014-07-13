@@ -42,13 +42,12 @@
     self.synthesizer = [[NSSpeechSynthesizer alloc] initWithVoice: self.voice1];
     self.synthesizer.delegate = self;
 
-//    [self.startSpeaking setEnabled: YES];
-
-//    NSLog(@"%@", @(self.voiceSelection.selectedSegment));
-
     // TAB 3 ////////////////////////////////////////
 
-//    NSLog(@"%@", self.speakField.string);
+    self.theArray = [[NSMutableArray alloc] init];
+    NSString *arrayVoice = @"com.apple.speech.synthesis.voice.Alex";
+    self.recordSynth = [[NSSpeechSynthesizer alloc] initWithVoice: arrayVoice];
+    self.recordSynth.delegate = self;
 }
 
 // TAB 1 ////////////////////////////////////////////////
@@ -135,24 +134,20 @@
 }
 
 
+// TAB 3 /////////////////////////////////////////////////////////////////////////////////
+
+-(IBAction)moveTextFromFieldToResult:(id)sender {
+    // Get current Input
+    NSString *curInput = _arrayField.stringValue;
+
+    // Put In Array
+    [self.theArray addObject:curInput];
+    _arrayField.stringValue = @"";
+    [self.resultField setString: [_theArray componentsJoinedByString:@"   \n"]];
+}
+
+-(IBAction)playTextInResultField:(id)sender {
+    [self.recordSynth startSpeakingString: self.resultField.string];
+}
+
 @end
-
-
-
-
-//    NSLog(@"%@", @(selectedRow));
-
-//    _numberOutput.stringValue = [NSString stringWithFormat: @"%ld", (long)selectedRow];
-
-//+ (NSString *)localizedStringFromNumber:(NSNumber *)num numberStyle:(NSNumberFormatterStyle)nstyle NS_AVAILABLE(10_6, 4_0);
-
-// Attributes of an NSNumberFormatter
-
-//- (NSNumberFormatterStyle)numberStyle;
-//- (void)setNumberStyle:(NSNumberFormatterStyle)style;
-
-
-// These all provide the same result
-// [self numberOutput].stringValue = sliderValue;
-// self.numberOutput.stringValue   = sliderValue;
-// _numberOutput.stringValue       = sliderValue;

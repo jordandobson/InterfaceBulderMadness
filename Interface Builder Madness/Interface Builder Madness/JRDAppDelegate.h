@@ -35,14 +35,15 @@
 @property          NSString  *voice2;
 @property          NSString  *voice3;
 
+// TAB 3
 
+@property IBOutlet NSTextField *arrayField;
+@property IBOutlet NSButton    *recordButton;
+@property IBOutlet NSButton    *playButton;
+@property IBOutlet NSTextView  *resultField;
 
-
-
-
-
-// @property NSMutableArray *formatStyles;
-
+@property          NSMutableArray       *theArray;
+@property          NSSpeechSynthesizer  *recordSynth;
 
 
 @end
