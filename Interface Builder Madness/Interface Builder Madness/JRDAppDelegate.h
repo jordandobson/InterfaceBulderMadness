@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface JRDAppDelegate : NSObject <NSApplicationDelegate>
+@interface JRDAppDelegate : NSObject <NSApplicationDelegate, NSSpeechSynthesizerDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 
+// TAB 1
 @property IBOutlet NSTextField *numberField;
 @property IBOutlet NSTextField *numberOutput;
 @property IBOutlet NSSlider    *numberSlider;
@@ -20,7 +21,28 @@
 @property (nonatomic, strong) NSNumberFormatter *formatter;
 
 
+// TAB 2
 
-@property NSMutableArray *formatStyles;
+@property IBOutlet NSTextView           *speakField;
+@property IBOutlet NSButton             *startSpeaking;
+@property IBOutlet NSButton             *populate1;
+@property IBOutlet NSButton             *populate2;
+@property IBOutlet NSSegmentedControl   *voiceSelection;
+
+@property          NSSpeechSynthesizer  *synthesizer;
+
+@property          NSString  *voice1;
+@property          NSString  *voice2;
+@property          NSString  *voice3;
+
+
+
+
+
+
+
+// @property NSMutableArray *formatStyles;
+
+
 
 @end

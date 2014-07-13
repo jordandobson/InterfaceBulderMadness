@@ -12,13 +12,46 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
+    // TAB 1 ////////////////////////////////////////////
+
     // Init Formatter & Get Selected row in Index
-    
+
     self.formatter = [[NSNumberFormatter alloc] init];
 
     [[self numberFormat] selectCellAtRow: 0 column: 0];
     [[self numberFormat] sendAction];
+
+    // TAB 2 ///////////////////////////////////////////
+
+    NSArray  *voices      = [NSSpeechSynthesizer availableVoices];
+
+    self.voice1 = voices[ voices.count - 1 ];
+    self.voice2 = voices[ 10 ];
+    self.voice3 = voices[ 17 ];
+
+    NSString *voice1Label = [self.voice1 componentsSeparatedByString:@"."].lastObject;
+    NSString *voice2Label = [self.voice2 componentsSeparatedByString:@"."].lastObject;
+    NSString *voice3Label = [self.voice3 componentsSeparatedByString:@"."].lastObject;
+
+    [self.voiceSelection setLabel: voice1Label forSegment:0];
+    [self.voiceSelection setLabel: voice2Label forSegment:1];
+    [self.voiceSelection setLabel: voice3Label forSegment:2];
+
+    [self.voiceSelection setSelectedSegment:0];
+
+    self.synthesizer = [[NSSpeechSynthesizer alloc] initWithVoice: self.voice1];
+    self.synthesizer.delegate = self;
+
+//    [self.startSpeaking setEnabled: YES];
+
+//    NSLog(@"%@", @(self.voiceSelection.selectedSegment));
+
+    // TAB 3 ////////////////////////////////////////
+
+//    NSLog(@"%@", self.speakField.string);
 }
+
+// TAB 1 ////////////////////////////////////////////////
 
 -(IBAction)udpateNumberLabelWithSliderValue:(id)sender {
     NSString *convertedString = [self.formatter stringFromNumber:@(_numberSlider.integerValue)];
@@ -56,6 +89,51 @@
         _numberOutput.stringValue = [self.formatter stringFromNumber:pulledNumber];
     }
 }
+
+// TAB 2 /////////////////////////////////////////////////////////////////////////////////
+
+
+-(IBAction)speakContentsOfTextView:(id)sender {
+    NSLog(@"Start Speaking");
+    [self.startSpeaking setEnabled: NO];
+    [self.synthesizer startSpeakingString: self.speakField.string];
+}
+
+-(IBAction)speakABCs:(id)sender {
+    [self.speakField setString: @"a b c d e f g, h i j k LMNOP, q r s, t u v, w x, y, and z."];
+    [self.startSpeaking setEnabled: NO];
+
+    [self.synthesizer startSpeakingString: self.speakField.string];
+}
+
+-(IBAction)speakPledge:(id)sender {
+    [self.speakField setString: @"I pledge allegiance to the ram, and the solid states of flash storage, and to the performance for which is stands, one system, under Mac,  double the pixels, with nVidia, and Retina, for ALL."];
+    [self.startSpeaking setEnabled: NO];
+
+    [self.synthesizer startSpeakingString: self.speakField.string];
+}
+
+-(void)speechSynthesizer:(NSSpeechSynthesizer *)sender didFinishSpeaking:(BOOL)finishedSpeaking
+{
+    NSLog(@"Stopped Speaking");
+    [self.startSpeaking setEnabled: YES];
+}
+
+-(IBAction)updateSpeechSynthesizerVoice:(id)sender {
+    switch (self.voiceSelection.selectedSegment) {
+        case 1:
+            NSLog(@"Voice1");
+            [self.synthesizer setVoice: self.voice2];
+            break;
+        case 2:
+            [self.synthesizer setVoice: self.voice3];
+            break;
+        default:
+            [self.synthesizer setVoice: self.voice1];
+            break;
+    }
+}
+
 
 @end
 

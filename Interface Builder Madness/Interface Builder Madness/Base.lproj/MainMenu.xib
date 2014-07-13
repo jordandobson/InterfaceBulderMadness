@@ -17,6 +17,9 @@
                 <outlet property="numberFormat" destination="jIK-b1-X4X" id="fHU-fU-Hdb"/>
                 <outlet property="numberOutput" destination="owu-X8-cG9" id="bw8-qZ-hUw"/>
                 <outlet property="numberSlider" destination="7GI-6H-yKJ" id="jwc-R0-Ldr"/>
+                <outlet property="speakField" destination="u79-eX-o8s" id="VJg-io-pbs"/>
+                <outlet property="startSpeaking" destination="IAI-Eq-iSR" id="SwW-Gn-CMk"/>
+                <outlet property="voiceSelection" destination="6j6-8X-4RJ" id="UY5-kV-tPV"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -684,7 +687,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Numbers" identifier="1" id="0mA-ca-GpF">
-                                <view key="view" ambiguous="YES" id="apb-jj-CZN">
+                                <view key="view" id="apb-jj-CZN">
                                     <rect key="frame" x="10" y="33" width="434" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -702,7 +705,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <action selector="numberFieldChanged:" target="Voe-Tx-rLC" id="fzu-Gw-p6X"/>
+                                                <action selector="updateNumberLabelWithFieldValue:" target="Voe-Tx-rLC" id="yT6-co-eek"/>
                                             </connections>
                                         </textField>
                                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7GI-6H-yKJ">
@@ -710,7 +713,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <sliderCell key="cell" state="on" alignment="left" maxValue="20" doubleValue="10" tickMarkPosition="above" numberOfTickMarks="21" allowsTickMarkValuesOnly="YES" sliderType="linear" id="bZU-Km-hpz"/>
                                             <connections>
-                                                <action selector="sliderChanged:" target="Voe-Tx-rLC" id="wL1-5y-r9h"/>
+                                                <action selector="udpateNumberLabelWithSliderValue:" target="Voe-Tx-rLC" id="bdW-Jq-TZE"/>
                                             </connections>
                                         </slider>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehr-iZ-s4y">
@@ -749,7 +752,7 @@
                                                 </column>
                                             </cells>
                                             <connections>
-                                                <action selector="radioChange:" target="Voe-Tx-rLC" id="hVJ-be-HD2"/>
+                                                <action selector="updateFormatfromRadioButtons:" target="Voe-Tx-rLC" id="3rV-lY-3fn"/>
                                             </connections>
                                         </matrix>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18u-hl-nHY">
@@ -792,12 +795,105 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Text" identifier="2" id="3Dz-yU-BWA">
-                                <view key="view" id="9wI-gf-ywY">
+                                <view key="view" ambiguous="YES" id="9wI-gf-ywY">
                                     <rect key="frame" x="10" y="33" width="434" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQF-i7-pMQ">
+                                            <rect key="frame" x="10" y="154" width="415" height="178"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <clipView key="contentView" ambiguous="YES" misplaced="YES" id="bYv-9N-N5l">
+                                                <rect key="frame" x="1" y="1" width="413" height="176"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="u79-eX-o8s">
+                                                        <rect key="frame" x="0.0" y="0.0" width="413" height="176"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="minSize" width="413" height="176"/>
+                                                        <size key="maxSize" width="463" height="10000000"/>
+                                                        <attributedString key="textStorage">
+                                                            <fragment content="Welcome, Add some text for me to speak.">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="toolTip"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="minSize" width="413" height="176"/>
+                                                        <size key="maxSize" width="463" height="10000000"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="yuO-Is-a2y">
+                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ceq-58-bXg">
+                                                <rect key="frame" x="398" y="1" width="16" height="176"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAI-Eq-iSR">
+                                            <rect key="frame" x="152" y="77" width="131" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Start Speaking" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" sound="Pop" id="ZXP-wO-UvM">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="speakContentsOfTextView:" target="Voe-Tx-rLC" id="fRZ-7U-4eV"/>
+                                            </connections>
+                                        </button>
+                                        <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6j6-8X-4RJ">
+                                            <rect key="frame" x="15" y="123" width="404" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="1s5-WS-2sj">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment width="132">
+                                                        <nil key="label"/>
+                                                    </segment>
+                                                    <segment width="132" tag="1">
+                                                        <nil key="label"/>
+                                                    </segment>
+                                                    <segment width="132">
+                                                        <nil key="label"/>
+                                                    </segment>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="updateSpeechSynthesizerVoice:" target="Voe-Tx-rLC" id="Xvc-Vk-Utj"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-Fd-hvh">
+                                            <rect key="frame" x="225" y="16" width="200" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="roundRect" title="Pledge of Allegiance" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xWa-Qn-BSS">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="controlContent"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="speakPledge:" target="Voe-Tx-rLC" id="Oiy-Mi-gb7"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Uk-5l-V9f">
+                                            <rect key="frame" x="10" y="16" width="200" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="roundRect" title="ABCs" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yxQ-lC-H86">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="controlContent"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="speakABCs:" target="Voe-Tx-rLC" id="MjN-Jy-CsK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Surprise" identifier="" id="KqH-3V-4yf">
+                            <tabViewItem label="Array" identifier="" id="KqH-3V-4yf">
                                 <view key="view" id="J9O-To-sg3">
                                     <rect key="frame" x="10" y="33" width="434" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -848,4 +944,7 @@
             </scroller>
         </scrollView>
     </objects>
+    <resources>
+        <sound name="Pop"/>
+    </resources>
 </document>
